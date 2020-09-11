@@ -1,4 +1,4 @@
-version: '1.0.0' #defining file version
+version: '2' #defining docker-compose version
 
 services: #Defining services (containers) to be managed by compose
   db:
