@@ -1,0 +1,5 @@
+version: '1.0.0' #defining file version
+
+services: #Defining services (containers) to be managed by compose
+  db:
+    image: postgres:9.6
