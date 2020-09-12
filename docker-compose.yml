@@ -1,5 +1,18 @@
 version: '2' #defining docker-compose version
 
+volumes: 
+  data-volume:
+
 services: #Defining services (containers) to be managed by compose
   db:
     image: postgres:9.6
+    ports: 
+      - 5432:5432
+    environment: 
+      POSTGRES_PASSWORD: root
+    volumes: 
+      #Data Volume
+      - data-volume:/var/lib/postgresql/data
+      #Scripts
+      - ./scripts:/scripts
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
