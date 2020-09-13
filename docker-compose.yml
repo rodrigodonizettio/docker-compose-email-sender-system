@@ -24,3 +24,13 @@ services: #Defining services (containers) to be managed by compose
     volumes: 
       #WebSite
       - ./web:/usr/share/nginx/html
+  
+  app:
+    image: python:3.6
+    ports: 
+      - 8080:8080
+    working_dir: /app #Defines the main working directory
+    command: bash ./app.sh
+    volumes: 
+      #Application
+      - ./app:/app
