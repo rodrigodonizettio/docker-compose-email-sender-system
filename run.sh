@@ -7,3 +7,5 @@ sleep 5
 # docker-compose exec db psql -U postgres -c "\l" #Run a command "\l" (list all databases) in "db" "service" (container)
 
 docker-compose exec db psql -U postgres -f /scripts/check.sql #Run the /scripts/check.sql inside the container
+
+docker-compose logs -f -t #Display Log output from the "services" (containers) where it <-f> Follow log output and show <-t> Timestamps
