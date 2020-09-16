@@ -32,6 +32,8 @@ services: #Defining services (containers) to be managed by compose
       - ./web:/usr/share/nginx/html
       #Reverse Proxy config.
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks: 
+      - web
   
   app:
     image: python:3.6
