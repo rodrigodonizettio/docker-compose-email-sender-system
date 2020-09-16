@@ -40,3 +40,6 @@ services: #Defining services (containers) to be managed by compose
     volumes: 
       #Application
       - ./app:/app
+    networks: 
+      - database
+      - web
