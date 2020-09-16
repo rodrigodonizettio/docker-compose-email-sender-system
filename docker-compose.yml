@@ -43,3 +43,5 @@ services: #Defining services (containers) to be managed by compose
     networks: 
       - database
       - web
+    depends_on: 
+      - db
