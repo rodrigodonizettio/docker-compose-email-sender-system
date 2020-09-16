@@ -20,6 +20,8 @@ services: #Defining services (containers) to be managed by compose
       #Scripts
       - ./scripts:/scripts
       - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks: 
+      - database
 
   frontend:
     image: nginx:1.13
