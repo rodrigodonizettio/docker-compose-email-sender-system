@@ -1,7 +1,7 @@
 import psycopg2
 from bottle import route, run, request
 
-DNS = 'dbname=email_sender user=postgres host=db'
+DNS = 'dbname=email_sender user=postgres1 password=root host=db'
 INSERT_SQL = 'insert into emails (subject, message) values (%s, %s)'
 
 def register_message(subject, message):
