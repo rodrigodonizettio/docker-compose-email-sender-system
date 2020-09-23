@@ -50,7 +50,8 @@ services: #Defining services (containers) to be managed by compose
       - web
       - queue_net
     depends_on: 
-      - db  
+      - db
+      - queue
   
   worker:
     image: python:3.6
