@@ -17,6 +17,5 @@ create table emails (
 /* Creating a User and giving some privileges */
 create user postgres1 with encrypted password 'root';
 grant connect on database email_sender to postgres1;
-grant usage on schema public to postgres1;
-grant all privileges on all tables in schema public to postgres1;
-grant all privileges on all sequences in schema public to postgres1;
+grant all on schema public to postgres1;
+grant all on sequence public.emails_id_seq TO postgres1;
