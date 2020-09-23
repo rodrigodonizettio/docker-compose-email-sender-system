@@ -48,5 +48,6 @@ services: #Defining services (containers) to be managed by compose
     networks: 
       - database
       - web
+      - queue_net
     depends_on: 
       - db
