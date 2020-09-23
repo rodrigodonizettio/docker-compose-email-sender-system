@@ -3,6 +3,7 @@ version: '2' #defining docker-compose version
 networks: 
   database:
   web:
+  queue_net:
 
 volumes: 
   data-volume:
