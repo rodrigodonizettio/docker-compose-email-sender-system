@@ -51,6 +51,20 @@ services: #Defining services (containers) to be managed by compose
       - queue_net
     depends_on: 
       - db  
+  
+  worker:
+    image: python:3.6
+    working_dir: /worker
+    command: ./app.sh
+    volumes: 
+      #Workers
+      - ./worker:/worker
+    networks: 
+      - queue_net
+    depends_on: 
+      - queue
+      - app
+  
   queue:
     image: redis:3.2
     networks: 
