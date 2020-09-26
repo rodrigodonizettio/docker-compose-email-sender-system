@@ -2,7 +2,7 @@ import os
 import psycopg2
 import redis
 import json
-from bottle import route, run, request
+from bottle import Bottle, route, run, request
 
 class Sender(Bottle):
   def __init__(self):
