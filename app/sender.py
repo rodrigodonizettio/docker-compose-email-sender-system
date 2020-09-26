@@ -38,8 +38,6 @@ class Sender(Bottle):
     self.register_message(subject, message)
     return 'Email was queued successfully! Subject: {} - Message: {}'.format(subject, message)
 
-#@route('/', method='POST')
-
 if __name__ == '__main__':
   sender = Sender()
   sender.run(host='0.0.0.0', port=8080, debug=True)
