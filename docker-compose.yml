@@ -54,7 +54,7 @@ services: #Defining services (containers) to be managed by compose
       - queue
   
   worker:
-    image: python:3.6
+    build: worker #Will search for Dockerfile in "worker" path to build the "worker" service
     working_dir: /worker
     command: ./app.sh
     volumes: 
