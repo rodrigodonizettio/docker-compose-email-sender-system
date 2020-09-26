@@ -40,6 +40,11 @@ services: #Defining services (containers) to be managed by compose
   
   app:
     image: python:3.6
+    environment: 
+      - DB_NAME=email_sender
+      - DB_USER=postgres1
+      - DB_PASSWORD=root
+      - DB_HOST=db
     working_dir: /app #Defines the main working directory
     command: bash ./app.sh
     volumes: 
