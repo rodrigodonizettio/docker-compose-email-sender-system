@@ -56,7 +56,7 @@ services: #Defining services (containers) to be managed by compose
   worker:
     build: worker #Will search for Dockerfile in "worker" path to build the "worker" service
     working_dir: /worker
-    command: ./app.sh
+    command: ./worker.py
     volumes: 
       #Workers
       - ./worker:/worker
