@@ -32,7 +32,7 @@ class Sender(Bottle):
     self.queue.rpush('sender', json.dumps(msg))
     print('Email was registered successfully!')
 
-  def send():
+  def send(self):
     subject = request.forms.get('subject')
     message = request.forms.get('message')
     self.register_message(subject, message)
