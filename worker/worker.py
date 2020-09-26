@@ -11,4 +11,4 @@ if __name__ == '__main__':
     email = json.loads(r.blpop('sender')[1])
     print('Sending the email: ', email['subject'])
     sleep(randint(15, 45))
-    print('Email ' email['subject'], 'was sent!')
+    print('Email ', email['subject'], 'was sent!')
